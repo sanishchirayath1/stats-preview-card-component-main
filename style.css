@@ -74,15 +74,17 @@ h2 + p {
   }
   .content {
     grid-area: content;
+    text-align: left;
   }
   div.stats {
     grid-area: stats;
     display: flex;
-    padding: 3rem;
+    padding: 1rem 2rem 0 2rem;
     justify-content: space-between;
   }
   div.stats > div {
     padding: 1rem;
+    padding-bottom: 0;
   }
   div.image {
     border-radius: unset;
