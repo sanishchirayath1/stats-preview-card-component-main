@@ -21,11 +21,15 @@ p {
   color: hsla(0, 0%, 100%, 0.75);
   line-height: 1.6;
   margin-bottom: 2rem;
+  margin-top: 0;
 }
 h1 {
   margin: 0;
 }
-
+h2 {
+  margin: 0;
+  padding: 0;
+}
 div.image {
   height: 300px;
   border-radius: 0.6rem 0.6rem 0 0;
@@ -56,7 +60,7 @@ h2 {
 }
 h2 + p {
   text-transform: uppercase;
-  margin: 0;
+  margin-bottom: 1rem;
   color: hsla(0, 0%, 100%, 0.6);
   padding-top: 0.6em;
   font-size: 12px;
@@ -66,31 +70,34 @@ h2 + p {
 @media (min-width: 800px) {
   .container {
     max-width: 1000px;
+    height: 375px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "content image" "stats image";
     padding: 0;
+    margin: 0;
+    text-align: left;
   }
   .content {
     grid-area: content;
-    text-align: left;
+    padding: 3rem 3rem 0 3rem;
   }
   div.stats {
     grid-area: stats;
     display: flex;
-    padding: 1rem 2rem 0 2rem;
+    padding: 0 3rem 0 3rem;
     justify-content: space-between;
-  }
-  div.stats > div {
-    padding: 1rem;
-    padding-bottom: 0;
+    align-items: center;
   }
   div.image {
     border-radius: unset;
     height: 100%;
     border-radius: 0 0.6rem 0.6rem 0;
     grid-area: image;
-    margin: 0;
+  }
+  p {
+    padding-top: 2rem;
+    margin-bottom: 0;
   }
 }
